@@ -1,0 +1,40 @@
+name: Something is wrong
+description: A crash, a wrong placement, a window or install problem
+labels: [beta, bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Route Map version
+      description: Help > About, or the file name you downloaded
+      placeholder: 0.1.0-beta.2
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Windows 11, Windows 10, macOS (Apple silicon), macOS (Intel), Linux]
+    validations:
+      required: true
+  - type: input
+    id: osversion
+    attributes:
+      label: OS version
+      placeholder: e.g. Windows 11 24H2, macOS 15.6, Ubuntu 24.04
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Trace orf.at\n2. ..."
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshot or JSON export (optional)
+      description: File > Export > JSON shows every placement decision. It lists the routers on your path, so attach it only if you are comfortable sharing that.
